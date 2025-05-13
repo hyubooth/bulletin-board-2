@@ -27,7 +27,7 @@ class BoardsController < ApplicationController
     the_board = Board.new
     the_board.name = params.fetch("query_name")
 
-    #the_board.user_id = current_user.id
+    the_board.user_id = current_user.id
 
     if the_board.valid?
       the_board.save
